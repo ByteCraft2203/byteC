@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Nosotros</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.9;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        
+        .logo-text h1 {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            font-size: 14px;
+        }
+        
+        nav {
+            background-color: #3498db;
+            padding: 18px 0;
+        }
+        
+        center nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        center nav ul li a {
+            color: white;
+            text-decoration: black;
+            font-size: 18px;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .hero {
+            background-color: #E6F2FF;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+        
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: black;
+        }
+        
+        .about-section {
+            padding: 40px 0;
+        }
+        
+        .about-section h3 {
+            font-size: 24px;
+            color: black;
+            margin-bottom: 20px;
+        }
+        
+        .mission-vision {
+            display: flex;
+            margin: 30px 0;
+            gap: 30px;
+        }
+        
+        .mission, .vision {
+            flex: 1;
+            background-color: white;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mission h4, .vision h4 {
+            color: black;
+            margin-bottom: 15px;
+        }
+        
+        .team-section {
+            padding: 40px 0;
+        }
+        
+        .team-section h3 {
+            font-size: 24px;
+            color: black;
+            margin-bottom: 20px;
+        }
+        
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .team-member {
+            flex: 1;
+            min-width: 150px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-member img {
+            width: 65%;
+            margin-left: 50px;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .team-member h4 {
+            color: #003366;
+            margin-bottom: 5px;
+        }
+        
+        .team-member p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .footer-section {
+            flex: 1;
+            margin-right: 20px;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .mission-vision {
+                flex-direction: column;
+            }
+            
+            .team-member {
+                min-width: 100%;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-section {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-text">
+            <center><h1>Nosotros</h1></center>
+        </div>
+    </header>
+    
+    <center>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="Principal.html">Inicio</a></li>
+                    <li><a href="Nosotros.HTML">Nosotros</a></li>
+                    <li><a href="CurriC.HTML">Curriculo</a></li>
+                    <li><a href="Contacto.Html">Contactanos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </center>
+    
+    <section class="hero">
+        <div class="container">
+            <p>Conoce más sobre el equipo de trabajo detras de la creación de esta 
+                página dirigida a la enseñanza del Módulo Formátivo de Soporte Técnico
+                 y nuestra misión para impulsar la transformación de la educación digital en nuestra institución.</p>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h3>Nuestro Equipo</h3>
+            
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="Ariel.jpeg" alt="Director de TI">
+                    <h4>Téc. Ariel Villamil</h4>
+                    <p>Director de Servicios IT</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="Mateo.jpeg" alt="Coordinador de Infraestructura">
+                    <h4>Téc. Mateo Guevara</h4>
+                    <p>Jefe de Desarrollo de Software</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="Pablo.jpeg" width="100px" alt="Jefe de Desarrollo">
+                    <h4>Téc. Pablo Bombón</h4>
+                    <p>Coordinadora de Infraestructura Tecnológica</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about-section">
+        <div class="container">
+            <p>Somos un  grupo de estudiantes de la Unidad Educativa Baños con la 
+                misión de crear una página web para la enseñanza de nuestro Módulo 
+                Formativo de Soporte Técnico dividido en los tres niveles de Bachillerato Técnico.</p>
+            <p>Nuestro equipo está conformado por estudiantes de la Carrera Profesional de Informática
+                 especializados en diversas áreas de la tecnología, comprometidos con la excelencia y 
+                la mejora continua para satisfacer las necesidades tecnológicas de 
+                nuestra comunidad Educativa.</p>
+            
+            <div class="mission-vision">
+                <div class="mission">
+                    <h4>Misión</h4>
+                    <p>Proporcionar servicios tecnológicos, innovadores y eficientes que impulsen y apoyen
+                         las actividades académicas, de investigación y administrativas de la Unidad Educativa Baños,
+                          garantizando la disponibilidad, seguridad y gestión óptima de los recursos informáticos.</p>
+                </div>
+                
+                <div class="vision">
+                    <h4>Visión</h4>
+                    <p>Nuestra vision es hacer que nuestra Unidad Educativa sea reconocida como una de las 
+                        mejores Instituciones formativas en el Bachillerato Técnico en Informática.</p>
+                </div>
+            </div>
+            
+            <h3>Objetivos Estratégicos</h3>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li>Implementar y mantener infraestructura tecnológica de vanguardia.</li>
+                <li>Brindar soporte técnico eficiente y oportuno a la comunidad.</li>
+                <li>Promover la innovación tecnológica dentro de la institución.</li>
+                <li>Proporcionar recursos educativos de alta calidad para formar técnicos competentes en diagnóstico y resolución de problemas de hardware.</li>
+                <li>Desarrollar un plan de estudios estructurado que cubra desde conceptos básicos hasta técnicas avanzadas de mantenimiento preventivo y correctivo.</li>
+            </ul>
+        </div>
+        <div>
+            <center><p>Realizado por Mateo Guevara</p></center>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Servicios IT</h4>
+                    <p>Unidad Educativa Baños</p>
+                    <p>Baños de Agua Santa</p>
+                    <p>Tungurahua - Ecuador</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="Principal.html">Inicio</a></li>
+                        <li><a href="Nosotros.HTML">Nosotros</a></li>
+                        <li><a href="#">Curriculo</a></li>
+                        <li><a href="Contacto.Html">Contactanos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>Teléfono: +593 </li>
+                        <li>Email: serviciotecnicobytecraft@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Servicios     - Unidad Educativa Baños. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

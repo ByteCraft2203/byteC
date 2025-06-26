@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Soporte Técnico Profesional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #3498db;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #3498db;
+            border-radius: 4px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        .page-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: #3498db;
+            margin: 15px auto;
+        }
+        
+        .services-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+        
+        .main-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .service-title {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .service-description {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .service-more {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+        .service-more:hover {
+            text-decoration: underline;
+        }
+        
+        .plans-section {
+            background-color: #ecf0f1;
+            padding: 50px 0;
+            margin: 50px 0;
+        }
+        
+        .plans-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .plans-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .plan-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .popular-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            transform: rotate(45deg) translateX(20px) translateY(-10px);
+            width: 150px;
+        }
+        
+        .plan-name {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .plan-price {
+            font-size: 40px;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .plan-price span {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .plan-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .plan-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .premium-plan .plan-button {
+            background-color: #2ecc71;
+        }
+        
+        .plan-button:hover {
+            background-color: #2980b9;
+        }
+        
+        .premium-plan .plan-button:hover {
+            background-color: #27ae60;
+        }
+        
+        .process-section {
+            margin: 50px 0;
+        }
+        
+        .process-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .process-steps:before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: #3498db;
+            z-index: 1;
+        }
+        
+        .process-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            background-color: #f5f7fa;
+            padding: 0 15px;
+        }
+        
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .step-name {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .step-description {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .team-section {
+            background-color: #ecf0f1;
+            padding: 50px 0;
+        }
+        
+        .team-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .member-image {
+            height: 200px;
+            background-color: #95a5a6;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+        }
+        
+        .member-info {
+            padding: 20px;
+        }
+        
+        .member-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .member-position {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .member-description {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .member-cert {
+            font-size: 12px;
+            background-color: #f8f9fa;
+            padding: 3px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .technologies-section {
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        .tech-title {
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .tech-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tech-icon {
+            font-size: 40px;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .tech-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .testimonials-section {
+            background-color: #2c3e50;
+            color: white;
+            padding: 50px 0;
+            margin: 50px 0 0;
+        }
+        
+        .testimonials-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .testimonial {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 25px;
+            position: relative;
+        }
+        
+        .quote {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .quote:before {
+            content: '"';
+            font-size: 60px;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            opacity: 0.3;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        .client-name {
+            font-weight: bold;
+        }
+        
+        .client-position {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        
+        .faq-section {
+            margin: 50px 0;
+        }
+        
+        .faq-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        .faq-question:after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer p {
+            padding: 20px 0;
+        }
+        
+        .faq-item.active .faq-question:after {
+            content: '-';
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+        
+        .cta-section {
+            background-color: #3498db;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }  
+        .cta-description {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .primary-button {
+            background-color: white;
+            color: #3498db;
+        }
+
+        .primary-button:hover {
+            background-color: #f8f9fa;
+            transform: scale(1.05);
+        }
+
+        .secondary-button {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .secondary-button:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 15px;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .process-steps:before {
+                display: none;
+            }
+            
+            .process-step {
+                margin-bottom: 30px;
+            }
+            
+            .cta-title {
+                font-size: 24px;
+            }
+        }
+</style>
+</head>
+<body>
+<header>
+<h1>Soporte Técnico Profesional</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="Principal.html">Página principal</a></li>
+         <li><a href="index.php">Inicio</a></li>
+         <li><a href="Nosotros.HTML">Nosotros</a></li>
+         <li><a href="Ayuda.HTML">Ayuda</a></li>
+         <li><a href="Contacto.Html">Contactanos</a></li>
+     </ul>
+</nav>
+
+<main>
+<section class="container">
+    <h2 class="page-title">Nuestros Servicios</h2>
+    <div class="services-intro">
+        <p>Ofrecemos soluciones completas de soporte técnico. Nuestro equipo está capacitado para resolver cualquier problema técnico con rapidez y eficiencia, minimizando el tiempo de inactividad y maximizando su productividad.</p>
+    </div>
+</section>
+
+<center>
+    <section class="process-section container">
+        <h2 class="process-title">Nuestro Proceso de Trabajo</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h4 class="step-name">Observación</h4>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h4 class="step-name">Diagnóstico</h4>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h4 class="step-name">Solución</h4>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h4 class="step-name">Seguimiento</h4>
+            </div>
+        </div>
+    </section>
+</center>
+
+<section class="team-section">
+    <h2 class="team-title">Nuestro Equipo de Expertos</h2>
+    <div class="team-members">
+        <div class="team-member">
+            <div class="member-image">👨‍💻</div>
+            <div class="member-info">
+                <h3 class="member-name">Mateo Guevara</h3>
+                <p class="member-description">Con experiencia en configuración y solución de problemas de redes complejas.</p>
+                <p class="member-position">Especialista en</p>
+                <span class="member-cert">DevC++</span>
+                <span class="member-cert">JavaScript</span>
+                <span class="member-cert">Pseint</span>
+                
+            </div>
+        </div>
+
+        <div class="team-member">
+            <div class="member-image">👨‍💻</div>
+            <div class="member-info">
+                <h3 class="member-name">Ariel Villamil</h3>
+                <p class="member-description">Especialista en resolución de problemas complejos de hardware y software. Experto en recuperación de datos.</p>
+                <p class="member-position">Especialista en</p>
+                <span class="member-cert">DevC++</span>
+                <span class="member-cert">JavaScript</span>
+                <span class="member-cert">Pseint</span>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <div class="member-image">👨‍💻</div>
+            <div class="member-info">
+                <h3 class="member-name">Juan Bombón</h3>
+                <p class="member-description">Experta en protección de datos y sistemas contra todo tipo de amenazas.</p>
+                <p class="member-position">Especialista en</p>
+                <span class="member-cert">DevC++</span>
+                <span class="member-cert">JavaScript</span>
+                <span class="member-cert">Pseint</span>
+            </div>
+        </div>  
+    </div>
+</section>
+    
+    <footer>
+        <div class="footer-links">
+        </div>
+        <p class="copyright">© 2025 Soporte Técnico Profesional. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script>
+        // Script para las preguntas frecuentes
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

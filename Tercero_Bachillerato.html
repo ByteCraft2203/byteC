@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Técnico Informático - Tercero de Bachillerato</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --info-color: #3498db;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #2196F3;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0.5rem;
+            background-color: #2196F3;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            border-radius: 3px;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero {
+            background-color: #424242;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .section h2 {
+            color: #1871c4;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 0.5rem;
+        }
+
+        .subsection {
+            margin-left: 1.5rem;
+        }
+
+        .subsection h3 {
+            color: #424242;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .conceptos {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(11, 122, 226, 0.836);
+        }
+
+        .conceptos h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #0da7ee;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 2rem 1rem;
+            background-color: #0d76a8;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: #0da7ee;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Soporte Técnico Informático</h1>
+        <p>Tercero de Bachillerato</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="#redes">Redes de Computadoras</a>
+        <a href="#sistemas">Sistemas Operativos</a>
+        <a href="#programacion">Programación</a>
+        <a href="#ciberseguridad">Ciberseguridad</a>
+        <a href="#bases-datos">Bases de Datos</a>
+        <a href="#ia">Inteligencia Artificial</a>
+        <a href="#web">Desarrollo Web</a>
+        <a href="#nube">Computación en la Nube</a>
+        <a href="#mantenimiento">Mantenimiento</a>
+        <a href="#etica">Ética y Legislación</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Explora el Mundo de la Informática</h1>
+        <p>Conoce las tecnologías clave para el desarrollo y gestión de sistemas informáticos.</p>
+    </section>
+
+    <div class="container">
+        <section id="redes" class="section">
+            <h2>Redes de Computadoras</h2>
+            <p>Las redes de computadoras permiten la interconexión de dispositivos para el intercambio de información y recursos. Entre los principales tipos de redes encontramos:</p>
+            <ul>
+                <li><strong>LAN (Red de Área Local)</strong>: Utilizada en hogares y oficinas para compartir archivos y dispositivos.</li>
+                <li><strong>WAN (Red de Área Amplia)</strong>: Conecta múltiples LAN a nivel global, como Internet.</li>
+                <li><strong>WLAN (Red de Área Local Inalámbrica)</strong>: Utiliza tecnología Wi-Fi para la comunicación sin cables.</li>
+            </ul>
+            <p>Los dispositivos clave en una red incluyen routers, switches, firewalls y puntos de acceso. Para garantizar la seguridad, se recomienda el uso de contraseñas robustas, VPN y actualizaciones constantes.</p>
+        </section>
+
+        <section id="sistemas" class="section">
+            <h2>Sistemas Operativos y su Administración</h2>
+            <p>Los sistemas operativos permiten la gestión del hardware y software en un equipo. Los más comunes son:</p>
+            <ul>
+                <li><strong>Windows</strong>: Popular en entornos domésticos y empresariales.</li>
+                <li><strong>Linux</strong>: Utilizado en servidores y desarrollo de software.</li>
+                <li><strong>MacOS</strong>: Exclusivo de dispositivos Apple, destaca por su estabilidad.</li>
+                <li><strong>Android e iOS</strong>: Principales en dispositivos móviles.</li>
+            </ul>
+            <p>La administración incluye la gestión de usuarios, permisos y monitoreo de rendimiento para garantizar eficiencia y seguridad.</p>
+        </section>
+
+        <section id="programacion" class="section">
+            <h2>Programación y Desarrollo de Software</h2>
+            <p>El desarrollo de software permite la creación de aplicaciones y herramientas digitales. Lenguajes clave incluyen:</p>
+            <ul>
+                <li><strong>Python</strong>: Ideal para automatización y análisis de datos.</li>
+                <li><strong>JavaScript</strong>: Fundamental en desarrollo web.</li>
+                <li><strong>C++ y Java</strong>: Usados en aplicaciones empresariales y videojuegos.</li>
+                <li><strong>SQL</strong>: Esencial para bases de datos.</li>
+            </ul>
+            <p>Conceptos básicos en programación incluyen estructuras de datos, algoritmos y programación orientada a objetos (POO), que facilita la organización y mantenimiento del código.</p>
+        </section>
+
+        <section id="ciberseguridad" class="section">
+            <h2>Ciberseguridad y Protección de Datos</h2>
+            <p>La ciberseguridad protege la información y los sistemas contra amenazas digitales como:</p>
+            <ul>
+                <li><strong>Malware</strong>: Virus y troyanos diseñados para dañar o robar información.</li>
+                <li><strong>Phishing</strong>: Técnicas de engaño para obtener credenciales.</li>
+                <li><strong>Ataques DDoS</strong>: Saturación de servidores con tráfico malicioso.</li>
+                <li><strong>Ingeniería Social</strong>: Manipulación para acceder a información confidencial.</li>
+            </ul>
+            <p>Se recomienda el uso de antivirus, autenticación de dos factores (2FA) y encriptación de datos.</p>
+        </section>
+
+        <section id="bases-datos" class="section">
+            <h2>Bases de Datos y Gestión de la Información</h2>
+            <p>Las bases de datos permiten almacenar y recuperar información eficientemente. Tipos principales:</p>
+            <ul>
+                <li><strong>Relacionales (SQL)</strong>: MySQL, PostgreSQL.</li>
+                <li><strong>NoSQL</strong>: MongoDB, Firebase.</li>
+            </ul>
+            <p>Las operaciones básicas incluyen la creación de estructuras, inserción y modificación de datos, así como consultas avanzadas mediante SQL.</p>
+        </section>
+
+        <section id="ia" class="section">
+            <h2>Inteligencia Artificial y Ciencia de Datos</h2>
+            <p>La inteligencia artificial (IA) permite a los sistemas mejorar su desempeño sin intervención humana. Aplicaciones clave incluyen:</p>
+            <ul>
+                <li><strong>Aprendizaje Automático (Machine Learning)</strong>.</li>
+                <li><strong>Visión por Computadora y Reconocimiento de Imágenes</strong>.</li>
+                <li><strong>Procesamiento de Lenguaje Natural para Chatbots</strong>.</li>
+                <li><strong>Big Data y Análisis Predictivo</strong>.</li>
+            </ul>
+            <p>Herramientas populares incluyen TensorFlow, Scikit-learn y Pandas.</p>
+        </section>
+
+        <section id="web" class="section">
+            <h2>Desarrollo Web y Aplicaciones Móviles</h2>
+            <p>El desarrollo web utiliza:</p>
+            <ul>
+                <li><strong>Frontend</strong>: HTML, CSS, JavaScript.</li>
+                <li><strong>Backend</strong>: Node.js, PHP, Python.</li>
+                <li><strong>Bases de datos</strong>: MySQL, Firebase.</li>
+            </ul>
+            <p>Para aplicaciones móviles:</p>
+            <ul>
+                <li><strong>Android</strong>: Java o Kotlin con Android Studio.</li>
+                <li><strong>iOS</strong>: Swift con Xcode.</li>
+                <li><strong>Frameworks híbridos</strong>: React Native, Flutter.</li>
+            </ul>
+        </section>
+
+        <section id="nube" class="section">
+            <h2>Computación en la Nube y Virtualización</h2>
+            <p>La computación en la nube permite almacenar y procesar datos de forma remota. Principales servicios:</p>
+            <ul>
+                <li><strong>IaaS (Infraestructura como Servicio)</strong>: AWS, Google Cloud.</li>
+                <li><strong>PaaS (Plataforma como Servicio)</strong>: Heroku, Firebase.</li>
+                <li><strong>SaaS (Software como Servicio)</strong>: Google Drive, Dropbox.</li>
+            </ul>
+            <p>Beneficios clave incluyen escalabilidad, acceso remoto y reducción de costos.</p>
+        </section>
+
+        <section id="mantenimiento" class="section">
+            <h2>Mantenimiento y Soporte Técnico Avanzado</h2>
+            <p>El mantenimiento de equipos es esencial para su correcto funcionamiento. Se divide en:</p>
+            <ul>
+                <li><strong>Preventivo</strong>: Limpieza de hardware, monitoreo de temperatura y actualización de software.</li>
+                <li><strong>Correctivo</strong>: Diagnóstico de fallas, reemplazo de componentes y recuperación de datos.</li>
+            </ul>
+        </section>
+
+        <section id="etica" class="section">
+            <h2>Ética y Legislación Informática</h2>
+            <p>El uso responsable de la tecnología implica conocer sus implicaciones legales y éticas. Normas clave incluyen:</p>
+            <ul>
+                <li><strong>GDPR</strong>: Regulación de protección de datos en la Unión Europea.</li>
+                <li><strong>Propiedad Intelectual</strong>: Protección de derechos de autor sobre software y contenido digital.</li>
+            </ul>
+            <p>El conocimiento de estos principios es fundamental para el correcto uso de la tecnología en la sociedad actual.</p>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+pp{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    /* Aplicar la imagen como fondo a todo el body */
+    background-image: url('Fondo_Principal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+    background-repeat: no-repeat;
+}
+
+/* Alternativa: si quieres un efecto de superposición oscuro para mejorar la legibilidad */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Capa semitransparente */
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Barra superior gris con iconos sociales */
+.social-bar {
+    background-color: rgba(78, 82, 88, 0.9); /* Con transparencia */
+    padding: 10px 0;
+    text-align: right;
+}
+
+.social-bar a {
+    color: white;
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+/* Header principal con logo y menú */
+.header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Con transparencia */
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.logo-text span {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Ocultar el checkbox y el icono del menú en pantallas grandes */
+#menu, .menu label {
+    display: none;
+}
+
+/* Menú de navegación */
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 12px;
+}
+
+.navbar ul li a {
+    color: #888;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #333;
+}
+
+/* Icono de búsqueda */
+.search-icon {
+    color: #888;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Contenido del área blanca principal */
+.content {
+    background-color: rgba(255, 255, 255, 0.9); /* Con transparencia */
+    border-radius: 5px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.content h1 {
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+/* Sección de soporte técnico */
+.soporte-tecnico {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.soporte-tecnico img {
+    width: 140px;
+    margin-right: 30px;
+}
+
+.soporte-tecnico-texto {
+    flex: 1;
+}
+
+.soporte-tecnico-texto p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.soporte-link {
+    text-align: right;
+}
+
+.soporte-link a {
+    color: #ff5252;
+    text-decoration: none;
+}
+
+.soporte-link a:hover {
+    text-decoration: underline;
+}
+
+/* Versión alternativa: si quieres el fondo solo en una sección específica */
+.hero-section {
+    height: 500px;
+    background-image: url('fondo-chip.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu label {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 20px;
+        transition: left 0.3s;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+    
+    #menu:checked ~ .navbar {
+        left: 0;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+    }
+    
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    
+    .soporte-tecnico {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .soporte-tecnico img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .soporte-link {
+        text-align: center;
+    }
+}
